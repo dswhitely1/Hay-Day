@@ -96,7 +96,7 @@ exports.seed = function(knex) {
         { name: 'Sunflower', sourceId: 19 },
         { name: 'Pineapple', sourceId: 19 },
         { name: 'Mint', sourceId: 19 },
-        { name: 'Grapes', sourceId: 19 },
+        { name: 'Grape', sourceId: 19 },
         { name: 'Broccoli', sourceId: 19 },
         { name: 'Peony', sourceId: 19 },
         { name: 'Tea leaf', sourceId: 19 },
@@ -276,6 +276,7 @@ exports.seed = function(knex) {
         { name: 'Apple Ginger Tea', sourceId: 57 },
         { name: 'Orange tea', sourceId: 57 },
         { name: 'Mint tea', sourceId: 57 },
+        { name: 'Diamond', sourceId: 58 },
       ]);
     });
 };

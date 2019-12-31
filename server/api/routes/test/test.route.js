@@ -13,15 +13,17 @@ async function allSources(req, res) {
   const ingredients = await Ingredients.find();
   const productResponse = products.map(product => ({
     id: product.id,
-        name: product.name,
-    source: sources.filter(({id}) => product.sourceId === id)[0].name,
+    name: product.name,
+    source: sources.filter(({ id }) => product.sourceId === id)[0].name,
+    baseIngredient:
+      ingredients.filter(ing => ing.productId === product.id).length === 0,
     ingredients: ingredients
-        .filter(ing => ing.productId === product.id)
-        .map(list => ({
-          item: products.filter(product => product.id === list.ingredientId)[0].name,
-          quantity: list.quantity,
-        }))
-
+      .filter(ing => ing.productId === product.id)
+      .map(list => ({
+        item: products.filter(product2 => product2.id === list.ingredientId)[0]
+          .name,
+        quantity: list.quantity,
+      })),
   }));
   res.json(productResponse);
 }

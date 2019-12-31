@@ -62,6 +62,7 @@ exports.seed = function(knex) {
         { name: 'Sushi Bar' },
         { name: 'Taco Kitchen' },
         { name: 'Tea Stand' },
+        { name: 'HayDay Store $$$' },
       ]);
     });
 };
